@@ -42,7 +42,7 @@ var CommentBox = React.createClass({
   componentDidMount: function() {
     this.loadComments();
 
-    // setInterval(this.loadComments, this.props.interval)
+    setInterval(this.loadComments, this.props.interval);
   },
   render: function(){
     return(
@@ -114,6 +114,6 @@ var Comment = React.createClass({
 });
 
 React.render(
-  <CommentBox interval="10000" />,
+  <CommentBox interval="4000" />,
   document.getElementById('content')
 );
